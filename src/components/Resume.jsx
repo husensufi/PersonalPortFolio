@@ -14,7 +14,7 @@ const Resume = () => {
                 className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition-transform"
             >
                 <FaDownload className="text-xl" />
-                Download Resume
+                View Resume
             </a>
         </div>
     );
