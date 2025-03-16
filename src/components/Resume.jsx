@@ -3,9 +3,9 @@ import { FaDownload } from "react-icons/fa";
 
 const Resume = () => {
     return (
-        <div className="flex flex-col items-center justify-center bg-gray-100 p-10 rounded-2xl shadow-lg">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">My Resume</h2>
-            <p className="text-gray-600 text-lg mb-6">
+        <div className="flex flex-col items-center justify-center bg-gray-900 p-10 rounded-2xl shadow-lg">
+            <h2 className="text-3xl font-bold text-white mb-4">My Resume</h2>
+            <p className="text-white text-lg mb-6">
                 Click below to download my latest resume.
             </p>
             <a

@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 const blogPosts = [
     {
         id: 1,
-        title: "Mastering React: Best Practices",
+        title: "Mastering java: Best Practices",
         date: "March 10, 2025",
         summary: "Learn the best practices for writing efficient React applications.",
-        image: "https://tse2.mm.bing.net/th?id=OIP.GrH6P_BJ10DdckmGWOOA_gHaE8&pid=Api&P=0&h=220",
-        link: "https://reactjs.org/docs/getting-started.html" // Add a valid blog URL
+        image: "https://tse3.mm.bing.net/th?id=OIP.p7ZV9EU4Q31-_kPaQGH8MgHaEK&pid=Api&P=0&h=220",
+        link: "https://docs.oracle.com/en/java/"
     },
     {
         id: 2,
@@ -31,9 +31,10 @@ const blogPosts = [
 
 const Blog = () => {
     return (
-        <div className="max-w-6xl mx-auto px-6 py-12">
+        <div className="max-w-6xl mx-auto px-6 py-12 bg-gray-900">
+            {/* Blog Heading */}
             <motion.h2
-                className="text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white"
+                className="text-4xl font-bold text-center mb-10 text-white"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -41,9 +42,32 @@ const Blog = () => {
                 My Blog
             </motion.h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Blog Grid */}
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {blogPosts.map((post) => (
-                    <BlogPost key={post.id} post={post} />
+                    <motion.div
+                        key={post.id}
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                        className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all"
+                    >
+                        <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+                        <div className="p-6">
+                            <h3 className="text-xl font-semibold text-blue-400 hover:text-blue-500 transition duration-300">
+                                {post.title}
+                            </h3>
+                            <p className="text-gray-400 text-sm mt-1">{post.date}</p>
+                            <p className="text-gray-300 mt-2">{post.summary}</p>
+                            <a
+                                href={post.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 shadow-md"
+                            >
+                                Read More
+                            </a>
+                        </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

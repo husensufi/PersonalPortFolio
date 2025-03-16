@@ -53,14 +53,14 @@ const certifications = [
 
 const Certificates = () => {
     return (
-        <section className="bg-gray-100 py-12">
+        <section className="bg-gray-900 py-12">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl font-bold text-gray-800 text-center mb-6">
+                <h2 className="text-3xl font-bold text-white text-center mb-6">
                     Certifications & Achievements
                 </h2>
                 <div className="flex flex-wrap justify-center gap-6">
                     {certifications.map((cert, index) => (
-                        <div key={index} className="bg-white p-6 rounded-lg shadow-md w-80 text-center transition-transform duration-300 hover:scale-105">
+                        <div key={index} className="bg-gray-300 p-6 rounded-lg shadow-md w-80 text-center transition-transform duration-300 hover:scale-105">
                             <h3 className="text-lg font-semibold text-gray-700">{cert.title}</h3>
                             <p className="text-gray-500">{cert.platform}</p>
                             <span className="text-sm text-blue-600 font-semibold block mb-3">{cert.year}</span>

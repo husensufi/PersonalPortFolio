@@ -1,76 +1,43 @@
 import React from "react";
+import { FaHtml5, FaCss3Alt, FaJs, FaJava, FaNodeJs, FaReact, FaPython } from "react-icons/fa";
+import { SiSpringboot, SiMysql, SiMongodb } from "react-icons/si";
+//import csharpLogo from "./assets/csharp.png"; // Add your C# logo here
 
-const SkillBar = ({ skill, percentage, color }) => {
-    return (
-        <div className="mb-4">
-            <span className="font-semibold">{skill}</span>
-            <div className="w-64 bg-gray-300 h-4 rounded-md mt-1 relative">
-                <div
-                    className={`h-4 rounded-md ${color} flex items-center justify-end px-2 text-white font-bold text-xs`}
-                    style={{ width: `${percentage}%`, minWidth: "25px" }} // Ensures text visibility
-                >
-                    {percentage}%
-                </div>
-            </div>
-        </div>
-    );
-};
+const skills = [
+    { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
+    { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
+    { name: "JavaScript", icon: <FaJs className="text-yellow-500" /> },
+    { name: "Java", icon: <FaJava className="text-red-500" /> },
+    { name: "Spring Boot", icon: <SiSpringboot className="text-green-500" /> },
+    { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
+    { name: "MySQL", icon: <SiMysql className="text-blue-600" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-green-700" /> },
+    { name: "React", icon: <FaReact className="text-blue-400" /> },
+    { name: "Python", icon: <FaPython className="text-yellow-400" /> },
+  
+];
 
 const Skills = () => {
-    const skillSets = [
-        {
-            title: "Frontend",
-            skills: [
-                { name: "HTML", percent: 90, color: "bg-red-500" },
-                { name: "CSS", percent: 85, color: "bg-blue-500" },
-                { name: "JavaScript", percent: 80, color: "bg-yellow-500" },
-                { name: "Tailwind CSS", percent: 75, color: "bg-teal-500" },
-            ],
-        },
-        {
-            title: "Backend",
-            skills: [
-                { name: "Java", percent: 85, color: "bg-purple-500" },
-                { name: "Python", percent: 80, color: "bg-green-500" },
-                { name: "C#", percent: 75, color: "bg-indigo-500" },
-                { name: "JavaScript", percent: 70, color: "bg-orange-500" },
-            ],
-        },
-        {
-            title: "Frameworks",
-            skills: [
-                { name: "Spring Boot", percent: 80, color: "bg-pink-500" },
-                { name: "Node.js", percent: 75, color: "bg-lime-500" },
-                { name: "React.js", percent: 85, color: "bg-cyan-500" },
-            ],
-        },
-        {
-            title: "Database",
-            skills: [
-                { name: "MySQL", percent: 90, color: "bg-emerald-500" },
-                { name: "MongoDB", percent: 80, color: "bg-violet-500" },
-            ],
-        },
-    ];
-
     return (
-        <div className="p-6">
-            {/* Main Heading for Skills */}
-            <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
-                My Technical Skills 💻
-            </h2>
-
-            <div className="flex flex-wrap justify-center gap-6">
-                {skillSets.map((set, index) => (
-                    <div key={index} className="bg-white shadow-lg rounded-lg p-6 w-72">
-                        <h2 className="text-xl font-bold mb-4 text-gray-700">{set.title}</h2>
-                        {set.skills.map((skill, idx) => (
-                            <SkillBar key={idx} skill={skill.name} percentage={skill.percent} color={skill.color} />
-                        ))}
-                    </div>
-                ))}
+        <section className="bg-gray-900 py-12 text-white" id="skills">
+            <div className="max-w-6xl mx-auto px-4 text-center">
+                <h2 className="text-4xl font-bold mb-6">Skills</h2>
+                <p className="text-gray-400 mb-8">
+                    I specialize in full-stack development, working with a variety of modern technologies.
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 place-items-center">
+                    {skills.map((skill, index) => (
+                        <div
+                            key={index}
+                            className="bg-gray-800 rounded-lg shadow-lg p-6 w-40 h-40 flex flex-col items-center justify-center transform transition duration-500 hover:scale-110 hover:bg-gray-700"
+                        >
+                            <div className="text-5xl mb-2">{skill.icon}</div>
+                            <p className="text-lg font-semibold">{skill.name}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 

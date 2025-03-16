@@ -1,69 +1,69 @@
-import React from 'react';
+import React from "react";
+
+const projects = [
+    {
+        title: "Hospital Management System",
+        description: "Hospital Management System streamlines patient records, appointments, billing, and staff management efficiently. 🚑💻.",
+        github: "https://github.com/husensufi/",
+        image: "https://hospitalnews.com/wp-content/uploads/2016/04/Legal-update.jpg",
+    },
+    {
+        title: "Table Booking System",
+        description: "Table Booking System enables users to reserve tables online, ensuring smooth restaurant management and convenience 🍽️✅.",
+        github: "https://github.com/husensufi/",
+        image: "https://a57.foxnews.com/a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2018/09/640/320/1862/1048/restaurant_reservations.jpg?ve=1&tl=1?ve=1&tl=1",
+    },
+    {
+        title: "House Price Prediction In India",
+        description: "House price prediction in India utilizes AI and data analytics to estimate property values based on market trends, location, and demand. 🏡📊",
+        github: "https://github.com/husensufi/",
+        image: "https://tse3.mm.bing.net/th?id=OIP.hDCu9AOY3BSoOKih4_9E4wHaE8&pid=Api&P=0&h=220",
+    },
+    {
+        title: "Banking Enterprise System",
+        description: "Banking Enterprise System automates transactions, account management, and security, ensuring efficient banking operations with enhanced customer experience and data security. 💳🏦",
+        github: "https://github.com/husensufi/",
+        image: "https://c8.alamy.com/comp/2BGP341/collage-with-businessman-word-banking-and-financial-pictograms-on-dark-background-2BGP341.jpg",
+    },
+    {
+        title: "Zomato Data Analysis",
+        description: "Zomato Data Analysis examines customer reviews, restaurant trends, and ratings to provide insights for better decision-making and business growth. 📊🍽️",
+        github: "https://github.com/husensufi/",
+        image: "https://user-images.githubusercontent.com/66274316/254715967-697a2508-fb25-4f8d-829b-803371175bf7.png",
+    },
+];
 
 const Cards = () => {
     return (
-        <div className="p-6">
-            {/* Heading for the Projects Section */}
-            <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white mb-6">
-                Our Latest Projects 🚀
-            </h2>
-
-            <div className="flex flex-wrap justify-center gap-6">
-                {/* Project Card 1 */}
-                <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                    <a href="https://github.com/">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                           Table Booking System
-                        </h5>
-                    </a>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                    </p>
-                    <a href="https://github.com/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
-                        GoTO Project
-                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
-
-                {/* Project Card 2 */}
-                <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                    <a href="https://github.com/">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            House Prediction In India
-                        </h5>
-                    </a>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        Explore the latest advancements in artificial intelligence shaping the future.
-                    </p>
-                    <a href="https://github.com/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
-                        GoTo Project
-                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
-
-                {/* Project Card 3 */}
-                <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-                    <a href="https://sjec.ac.in">
-                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                            Cybersecurity Trends
-                        </h5>
-                    </a>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        Analyzing the biggest cybersecurity challenges and solutions in 2023.
-                    </p>
-                    <a href="https://sjec.ac.in" className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
-                        GoTo Project
-                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
+        <section className="bg-gray-900 py-12" id="projects">
+            <div className="max-w-6xl mx-auto px-6 text-center">
+                <h2 className="text-4xl font-bold p-4 text-white mb-8">Projects</h2>
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {projects.map((project, index) => (
+                        <div
+                            key={index}
+                            className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl"
+                        >
+                            <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+                            <div className="p-6">
+                                <h3 className="text-xl font-semibold text-blue-400 hover:text-blue-500 transition duration-300">
+                                    {project.title}
+                                </h3>
+                                <p className="text-gray-300 mt-2">{project.description}</p>
+                                <a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="mt-4 inline-block bg-blue-500 text-white px-5 py-2 rounded-lg hover:bg-blue-600 transition duration-300 shadow-md"
+                                >
+                                    View on GitHub
+                                </a>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

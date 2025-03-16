@@ -23,7 +23,7 @@ const Header = () => {
                     </li>
                     <li>
                         <ScrollLink to="about" smooth={true} duration={500} className="hover:text-blue-400 cursor-pointer">
-                            About Me
+                            About 
                         </ScrollLink>
                     </li>
                     <li>

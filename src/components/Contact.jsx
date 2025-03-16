@@ -45,7 +45,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="py-24">
+        <section className="py-24 bg-gray-900">
             <h1 className="text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white">
                 Contact Us
             </h1>
@@ -89,7 +89,7 @@ const Contact = () => {
                 </div>
 
                 {/* Contact Form */}
-                <div className="bg-gray-50 p-10 rounded-2xl shadow-lg">
+                <div className="bg-gray-200 p-10 rounded-2xl shadow-lg">
                     <h2 className="text-indigo-600 text-4xl font-semibold mb-8">Send Me A Message</h2>
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         <input type="text" name="name" placeholder="Name" className="w-full p-4 rounded-full border border-gray-300" required value={formData.name} onChange={handleChange} />

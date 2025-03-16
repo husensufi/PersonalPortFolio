@@ -5,7 +5,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-gray-900 text-white p-4 fixed top-0 w-full z-50 shadow-md">
+        <nav className="bg-gray-900 text-white p-5 fixed top-0 w-full z-50 shadow-md"> {/* Increased padding for height */}
             <div className="max-w-7xl mx-auto flex justify-between items-center">
 
                 {/* Left Side - Portfolio Name */}
@@ -13,7 +13,7 @@ const Navbar = () => {
                     to="home"
                     smooth={true}
                     duration={500}
-                    className="text-2xl font-bold cursor-pointer"
+                    className="text-3xl font-bold cursor-pointer" {/* Increased font size */}
                 >
                     Portfolio
                 </ScrollLink>
@@ -29,7 +29,7 @@ const Navbar = () => {
                 </button>
 
                 {/* Nav Links */}
-                <ul className={`md:flex space-x-6 ${isOpen ? "block" : "hidden"} md:block mt-4 md:mt-0`}>
+                <ul className={`md:flex space-x-6 ${isOpen ? "block" : "hidden"} md:block mt-4 md:mt-0 text-lg`}> {/* Increased font size */}
                     <li>
                         <ScrollLink to="home" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
                             Home
