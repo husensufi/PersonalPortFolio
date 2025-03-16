@@ -71,7 +71,7 @@ const Certificates = () => {
                                 rel="noopener noreferrer"
                                 className="inline-block px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition"
                             >
-                                Download Certificate
+                                View Certificate
                             </a>
                         </div>
                     ))}

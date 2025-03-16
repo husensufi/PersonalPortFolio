@@ -1,15 +1,22 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-gray-900 text-white p-4">
+        <nav className="bg-gray-900 text-white p-4 fixed top-0 w-full z-50 shadow-md">
             <div className="max-w-7xl mx-auto flex justify-between items-center">
 
                 {/* Left Side - Portfolio Name */}
-                <Link to="/" className="text-2xl font-bold">Portfolio</Link>
+                <ScrollLink
+                    to="home"
+                    smooth={true}
+                    duration={500}
+                    className="text-2xl font-bold cursor-pointer"
+                >
+                    Portfolio
+                </ScrollLink>
 
                 {/* Hamburger Menu for Mobile */}
                 <button
@@ -23,12 +30,36 @@ const Navbar = () => {
 
                 {/* Nav Links */}
                 <ul className={`md:flex space-x-6 ${isOpen ? "block" : "hidden"} md:block mt-4 md:mt-0`}>
-                    <li><Link to="/" className="hover:text-gray-400">Home</Link></li>
-                    <li><Link to="/about" className="hover:text-gray-400">About</Link></li>
-                    <li><Link to="/skills" className="hover:text-gray-400">Skills</Link></li>
-                    <li><Link to="/certificates" className="hover:text-gray-400">Certificates</Link></li>
-                    <li><Link to="/projects" className="hover:text-gray-400">Projects</Link></li>
-                    <li><Link to="/contact" className="hover:text-gray-400">Contact Us</Link></li>
+                    <li>
+                        <ScrollLink to="home" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+                            Home
+                        </ScrollLink>
+                    </li>
+                    <li>
+                        <ScrollLink to="about" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+                            About
+                        </ScrollLink>
+                    </li>
+                    <li>
+                        <ScrollLink to="skills" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+                            Skills
+                        </ScrollLink>
+                    </li>
+                    <li>
+                        <ScrollLink to="certificates" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+                            Certificates
+                        </ScrollLink>
+                    </li>
+                    <li>
+                        <ScrollLink to="projects" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+                            Projects
+                        </ScrollLink>
+                    </li>
+                    <li>
+                        <ScrollLink to="contact" smooth={true} duration={500} className="hover:text-gray-400 cursor-pointer">
+                            Contact Us
+                        </ScrollLink>
+                    </li>
                 </ul>
             </div>
         </nav>

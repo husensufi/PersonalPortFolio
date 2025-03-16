@@ -9,6 +9,7 @@ import {
     faGithub,
     faWhatsapp
 } from "@fortawesome/free-brands-svg-icons";
+import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => {
     return (
@@ -17,15 +18,15 @@ const Footer = () => {
                 {/* Top Section */}
                 <div className="sm:flex justify-between border-b border-gray-700 pb-8">
 
-                    {/* Menu */}
+                    {/* Menu with Smooth Scrolling */}
                     <div className="p-5 sm:w-2/12">
                         <h3 className="text-sm uppercase text-indigo-400 font-bold">Menu</h3>
                         <ul className="mt-3 space-y-2">
-                            <li><a href="#home" className="hover:text-indigo-400 transition">Home</a></li>
-                            <li><a href="#about" className="hover:text-indigo-400 transition">About</a></li>
-                            <li><a href="#projects" className="hover:text-indigo-400 transition">Projects</a></li>
-                            <li><a href="#skills" className="hover:text-indigo-400 transition">Skills</a></li>
-                            <li><a href="#contact" className="hover:text-indigo-400 transition">Contact</a></li>
+                            <li><ScrollLink to="home" smooth={true} duration={500} className="hover:text-indigo-400 transition cursor-pointer">Home</ScrollLink></li>
+                            <li><ScrollLink to="about" smooth={true} duration={500} className="hover:text-indigo-400 transition cursor-pointer">About</ScrollLink></li>
+                            <li><ScrollLink to="projects" smooth={true} duration={500} className="hover:text-indigo-400 transition cursor-pointer">Projects</ScrollLink></li>
+                            <li><ScrollLink to="skills" smooth={true} duration={500} className="hover:text-indigo-400 transition cursor-pointer">Skills</ScrollLink></li>
+                            <li><ScrollLink to="contact" smooth={true} duration={500} className="hover:text-indigo-400 transition cursor-pointer">Contact</ScrollLink></li>
                         </ul>
                     </div>
 
@@ -41,8 +42,8 @@ const Footer = () => {
                     <div className="p-5 sm:w-3/12">
                         <h3 className="text-sm uppercase text-indigo-400 font-bold">Contact Us</h3>
                         <ul className="mt-3 space-y-2">
-                            <li><a className="hover:text-indigo-400 transition" href="https://www.google.co.in/maps/@12.9076437,74.9040584,13z?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">Jeppu Mangalore Karnataka India 575002</a></li>
-                            <li><a className="hover:text-indigo-400 transition" href="mailto:contact@company.com" target="_blank">23ca032.husen@sjec.ac.in</a></li>
+                            <li><a className="hover:text-indigo-400 transition" href="https://www.google.co.in/maps/@12.9076437,74.9040584,13z?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Jeppu Mangalore Karnataka India 575002</a></li>
+                            <li><a className="hover:text-indigo-400 transition" href="mailto:contact@company.com" target="_blank" rel="noopener noreferrer">23ca032.husen@sjec.ac.in</a></li>
                         </ul>
                     </div>
                 </div>

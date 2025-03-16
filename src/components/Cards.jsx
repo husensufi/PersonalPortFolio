@@ -38,7 +38,7 @@ const Cards = () => {
                         Explore the latest advancements in artificial intelligence shaping the future.
                     </p>
                     <a href="https://github.com/" className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
-                        Learn More
+                        GoTo Project
                         <svg className="rtl:rotate-180 w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                         </svg>
@@ -56,7 +56,7 @@ const Cards = () => {
                         Analyzing the biggest cybersecurity challenges and solutions in 2023.
                     </p>
                     <a href="https://sjec.ac.in" className="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
-                        Read More
+                        GoTo Project
                         <svg className="rtl:rotate-180 w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                         </svg>
